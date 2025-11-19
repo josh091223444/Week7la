@@ -1,0 +1,87 @@
+/* src/App.css */
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+/* Container for sidebar + main content */
+.page-container {
+  display: flex;
+  min-height: calc(100vh - 200px); /* full viewport minus header */
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 25%;
+  min-width: 200px;
+  max-width: 300px;
+  background-color: #deded8;
+  padding: 1rem;
+}
+
+/* Main content: center the form */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Box around the form */
+form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  border: 2px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  background-color: #fff;
+}
+
+/* Input styling */
+form label {
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+form input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Button styling */
+form button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+/* Responsive layout: stack sidebar and main */
+@media screen and (max-width: 700px) {
+  .page-container {
+    flex-direction: column;
+  }
+
+  .sidebar,
+  .main-content {
+    width: 100%;
+  }
+
+  form {
+    width: 90%;
+  }
+}
