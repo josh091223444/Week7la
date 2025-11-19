@@ -1,15 +1,24 @@
 // src/components/RegistrationForm.jsx
 export default function RegistrationForm() {
   function handleSubmit(e) {
-    e.preventDefault();
+    e.preventDefault(); 
+
+
     const formData = new FormData(e.target);
-    const name = formData.get("name");
-    const email = formData.get("email");
-    alert(`Submitted: ${name} - ${email}`);
+
+  
+    const data = Object.fromEntries(formData.entries());
+
+   
+    const output = Object.entries(data)
+      .map(([key, value]) => `${key}: ${value}`)
+      .join(" — ");
+
+    alert(`Submitted: ${output}`);
   }
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="name">Name:</label>
         <input type="text" name="name" id="name" required />
@@ -20,7 +29,13 @@ export default function RegistrationForm() {
         <input type="email" name="email" id="email" required />
       </div>
 
-      <button type="submit" onClick={handleSubmit}>Submit</button>
+      {/* Example of adding more fields */}
+      <div>
+        <label htmlFor="age">Age:</label>
+        <input type="number" name="age" id="age" />
+      </div>
+
+      <button type="submit">Submit</button>
     </form>
   );
 }
