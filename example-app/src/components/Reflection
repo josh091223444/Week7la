@@ -1,0 +1,23 @@
+In what ways did React’s declarative style simplify what you had to code compared with the HTML + JS version?
+React simplified my code because I didn’t need to manually manipulate the DOM or write as many lines of code. By using components and JSX, I could describe the UI directly, which made creating and updating elements much faster compared to traditional HTML and JavaScript.
+
+
+What challenges did you face moving from imperative to declarative code?
+A challenge I faced was getting used to not updating the DOM manually. I also had to think differently about making my code reusable, since React encourages structuring the UI into components and passing data via props instead of directly accessing elements.
+
+Did React make anything reusable?
+Yes, React made several parts of my code reusable. For example, I was able to take components from previous labs, like the header, and adapt them for this activity. Similarly, the registration form and sidebar could be reused across different pages with minimal changes.
+
+How can you build on this when programming your own application?
+I can build on this by planning my applications using React components to make both the front end and back end easier to manage. For group projects, I can structure the UI so components are reusable and maintainable, reducing duplication and making collaboration more efficient.
+
+
+
+
+
+
+
+
+
+
+
